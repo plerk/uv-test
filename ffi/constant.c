@@ -1,0 +1,119 @@
+#include <ffi_platypus_bundle.h>
+#include <uv.h>
+
+#define _str(name)  c->set_str(#name,name)
+#define _sint(name) c->set_sint(#name,name)
+
+void
+ffi_pl_bundle_constant(const char *package, ffi_platypus_constant_t *c)
+{
+    _sint(UV_VERSION_MAJOR);
+    _sint(UV_VERSION_MINOR);
+    _sint(UV_VERSION_PATCH);
+    _sint(UV_VERSION_IS_RELEASE);
+    _sint(UV_VERSION_HEX);
+    _str(UV_VERSION_SUFFIX);
+    _sint(UV_E2BIG);
+    _sint(UV_EACCES);
+    _sint(UV_EADDRINUSE);
+    _sint(UV_EADDRNOTAVAIL);
+    _sint(UV_EAFNOSUPPORT);
+    _sint(UV_EAGAIN);
+    _sint(UV_EAI_ADDRFAMILY);
+    _sint(UV_EAI_AGAIN);
+    _sint(UV_EAI_BADFLAGS);
+    _sint(UV_EAI_BADHINTS);
+    _sint(UV_EAI_CANCELED);
+    _sint(UV_EAI_FAIL);
+    _sint(UV_EAI_FAMILY);
+    _sint(UV_EAI_MEMORY);
+    _sint(UV_EAI_NODATA);
+    _sint(UV_EAI_NONAME);
+    _sint(UV_EAI_OVERFLOW);
+    _sint(UV_EAI_PROTOCOL);
+    _sint(UV_EAI_SERVICE);
+    _sint(UV_EAI_SOCKTYPE);
+    _sint(UV_EALREADY);
+    _sint(UV_EBADF);
+    _sint(UV_EBUSY);
+    _sint(UV_ECANCELED);
+    _sint(UV_ECHARSET);
+    _sint(UV_ECONNABORTED);
+    _sint(UV_ECONNREFUSED);
+    _sint(UV_ECONNRESET);
+    _sint(UV_EDESTADDRREQ);
+    _sint(UV_EEXIST);
+    _sint(UV_EFAULT);
+    _sint(UV_EFBIG);
+    _sint(UV_EHOSTUNREACH);
+    _sint(UV_EINTR);
+    _sint(UV_EINVAL);
+    _sint(UV_EIO);
+    _sint(UV_EISCONN);
+    _sint(UV_EISDIR);
+    _sint(UV_ELOOP);
+    _sint(UV_EMFILE);
+    _sint(UV_EMSGSIZE);
+    _sint(UV_ENAMETOOLONG);
+    _sint(UV_ENETDOWN);
+    _sint(UV_ENETUNREACH);
+    _sint(UV_ENFILE);
+    _sint(UV_ENOBUFS);
+    _sint(UV_ENODEV);
+    _sint(UV_ENOENT);
+    _sint(UV_ENOMEM);
+    _sint(UV_ENONET);
+    _sint(UV_ENOPROTOOPT);
+    _sint(UV_ENOSPC);
+    _sint(UV_ENOSYS);
+    _sint(UV_ENOTCONN);
+    _sint(UV_ENOTDIR);
+    _sint(UV_ENOTEMPTY);
+    _sint(UV_ENOTSOCK);
+    _sint(UV_ENOTSUP);
+    _sint(UV_EPERM);
+    _sint(UV_EPIPE);
+    _sint(UV_EPROTO);
+    _sint(UV_EPROTONOSUPPORT);
+    _sint(UV_EPROTOTYPE);
+    _sint(UV_ERANGE);
+    _sint(UV_EROFS);
+    _sint(UV_ESHUTDOWN);
+    _sint(UV_ESPIPE);
+    _sint(UV_ESRCH);
+    _sint(UV_ETIMEDOUT);
+    _sint(UV_ETXTBSY);
+    _sint(UV_EXDEV);
+    _sint(UV_UNKNOWN);
+    _sint(UV_EOF);
+    _sint(UV_ENXIO);
+    _sint(UV_EMLINK);
+    _sint(UV_ASYNC);
+    _sint(UV_CHECK);
+    _sint(UV_FS_EVENT);
+    _sint(UV_FS_POLL);
+    _sint(UV_IDLE);
+    _sint(UV_NAMED_PIPE);
+    _sint(UV_POLL);
+    _sint(UV_PREPARE);
+    _sint(UV_PROCESS);
+    _sint(UV_STREAM);
+    _sint(UV_TCP);
+    _sint(UV_TIMER);
+    _sint(UV_TTY);
+    _sint(UV_UDP);
+    _sint(UV_SIGNAL);
+    _sint(UV_FILE);
+    /* Loop run constants */
+    _sint(UV_RUN_DEFAULT);
+    _sint(UV_RUN_ONCE);
+    _sint(UV_RUN_NOWAIT);
+    /* expose the Loop configure constants */
+    _sint(UV_LOOP_BLOCK_SIGNAL);
+    _sint(SIGPROF);
+    /* Poll Event Types */
+    _sint(UV_READABLE);
+    _sint(UV_WRITABLE);
+    _sint(UV_DISCONNECT);
+    _sint(UV_PRIORITIZED);
+}
